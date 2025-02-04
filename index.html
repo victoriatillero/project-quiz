@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.0/dist/confetti.browser.min.js"></script>
+    <script defer src="js/app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1157/1157109.png">
+    <title>StackUp</title>
+</head>
+<body>
+    <header>
+        <h1>StackUp</h1>
+    </header>
+    <main>
+        <section id="category-selection">
+            <h2>Select a Category</h2>
+            <div class="category-buttons">
+                <button id="js-btn"> JavaScript</button>
+                <button id="emmet-btn"> Emmet</button>
+            </div>
+        </section>
+        <section id="quiz" style="display: none;">
+            <h2 id="question-text">Question appears here</h2>
+            <div id="answers">
+                <button class="answer-btn"></button>
+                <button class="answer-btn"></button>
+                <button class="answer-btn"></button>
+                <button class="answer-btn"></button>
+                <button id="next-question" disabled>Next</button>
+            </div>
+        </section>
+        <section id= "results" style="display: none;">
+            <h2>Your score</h2>
+            <div id="stars-container"></div>
+            <p> Score: <span id= "final-score"></span>/7</p>
+            <button id="play-again">Play Again</button>
+        </section>
+    </main>
+
+</body>
+</html>
