@@ -31,7 +31,8 @@ main {
     border-radius: 16px;
     padding: 20px;
     height: 60vh;
-    width: 50%;
+    width: 80%;
+    max-width: 800px;
 }
 
 #category-selection h2 {
@@ -44,6 +45,7 @@ main {
     padding: 60px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -55,7 +57,10 @@ main {
     background-color: whitesmoke;
     color:black;
     cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s;
+    width:calc(100% / 3 -20px); /* ??  */
+    min-width: 120px; /* ??*/
+    box-sizing: border-box; /* ?? */
 }
 
 .category-buttons button:hover {
@@ -63,11 +68,11 @@ main {
     border-color: #7c73a7;
     transform: scale(1.1)
 }
-
+/*
 #question-text.centered {
     text-align:center;
     margin: 0 auto;
-}
+} */
 
 #question-text.not-centered {
     text-align: left;
@@ -88,14 +93,16 @@ main {
     text-align: center;
     cursor: pointer;
     transition:background 0.2s;
-
 }
+
 .answer-btn:hover {
     background: #c4c4c4
 }
+
 .answer-btn.selected {
     background: inherit !important;
 }
+
 .answer-btn.correct {
     background: #4CAF50 !important;
 }
@@ -103,14 +110,20 @@ main {
 .answer-btn.incorrect {
     background-color: #f44336 !important;
 }
+
 #stars-container {
     padding:20px 0;
     display: flex;
     justify-content: center;
-
+    flex-wrap: wrap;
+    gap:5px;
+    max-width: 100%;
+    overflow: hidden;
 }
+
 #stars-container img {
-    width: 60px;
+    width: 50px;
+    height: auto;
     margin-right: 5px;
 }
 #results {
@@ -120,14 +133,18 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:50%;
+    width:90%;
+    max-width: 800px;;
 }
+
 #results h2{
     margin-top: 0;
 }
+
 #final-score {
     margin-top: 20px;
 }
+
 #play-again{
     margin-top: 20px;
     padding:10px 20px;
@@ -137,6 +154,16 @@ main {
     border-radius: 5px;
     cursor: pointer;
 }
+
 #play-again:hover{
     background-color: #e3b154;
+}
+
+@media (max-width:600px){
+    .category-buttons button {
+        width:100%;
+    }
+    #stars-container img {
+        width: 50px;
+    }
 }
