@@ -4,8 +4,6 @@
 
 Link to Quiz Game: [stackUp Game](https://victoriatillero.github.io/project-quiz/)
 <br>
-Link to planning materials: no planning was done since this project was switched halfway through.
-<br>
 
 ### About the game:
 I created a quiz game to help new developers get more comforable with JavaScript and Emmet Abbreviations. The quiz will not provide the correct answer if it is guessed incorrectly to encourage playing again and learning the material. Once the round is complete, you can either play the same category again or a different category. If you score less than 3 correct, you will hear a message that says "better luck next time."
